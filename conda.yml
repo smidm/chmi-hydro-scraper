@@ -1,0 +1,11 @@
+name: chmi
+channels:
+  - defaults
+dependencies:
+  - lxml
+  - matplotlib
+  - pandas
+  - pip
+  - python=3
+prefix: /home/matej/local/conda/envs/chmi
+
