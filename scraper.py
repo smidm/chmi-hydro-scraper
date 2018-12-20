@@ -1,13 +1,13 @@
 import pandas as pd
 
-filename = 'teplota_chuchles.csv'
+filename = 'teplota_chuchle.csv'
 
 try:
-    df_old = pd.read_csv(filename, index_col=0)    
+    df_old = pd.read_csv(filename, index_col=0, parse_dates=[0])    
 except OSError:
     df_old = pd.DataFrame()
 
-df_new = pd.read_html('http://hydro.chmi.cz/hpps/popup_hpps_prfdyn.php?seq=307225', 'Teplota', header=0)[1]
+df_new = pd.read_html('http://hydro.chmi.cz/hpps/popup_hpps_prfdyn.php?seq=307225', 'Teplota', header=0, parse_dates=[0])[1]
 df_new = df_new.set_index('Datum a čas')
 
 # df.to_csv(filename)
