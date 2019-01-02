@@ -7,7 +7,8 @@ try:
 except OSError:
     df_old = pd.DataFrame()
 
-df_new = pd.read_html('http://hydro.chmi.cz/hpps/popup_hpps_prfdyn.php?seq=307225', 'Teplota', header=0, parse_dates=[0])[1]
+df_new = pd.read_html('http://hydro.chmi.cz/hpps/popup_hpps_prfdyn.php?seq=307225', 'Teplota', header=0)[1]
+df_new['Datum a čas'] = pd.to_datetime(df_new['Datum a čas'], dayfirst=True)
 df_new = df_new.set_index('Datum a čas')
 
 # df.to_csv(filename)
@@ -20,12 +21,4 @@ df.to_csv(filename)
 ax = df.filter(like='Teplota').plot()
 fig = ax.get_figure()
 fig.savefig('chart.png')
-
-
-
-
-
-
-
-
 
