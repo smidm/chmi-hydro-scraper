@@ -1,0 +1,6 @@
+SHELL=/bin/bash
+# MAILTO=john@doe.com
+
+@hourly     source ~/conda/bin/activate chmi && cd ~/chmi-hydro-scraper && python scraper.py && conda deactivate
+
+
