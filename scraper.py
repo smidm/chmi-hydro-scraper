@@ -1,6 +1,6 @@
 import pandas as pd
 
-filename = 'teplota_chuchle.csv'
+filename = 'out/chuchle.csv'
 
 try:
     df_old = pd.read_csv(filename, index_col=0, parse_dates=[0])    
@@ -17,8 +17,8 @@ df = df[~df.index.duplicated(keep='first')]
 df = df.sort_index()
 df.to_csv(filename)
 
-# import matplotlib.pylab as plt
-ax = df.filter(like='Teplota').plot()
-fig = ax.get_figure()
-fig.savefig('chart.png')
+## import matplotlib.pylab as plt
+#ax = df.filter(like='Teplota').plot()
+#fig = ax.get_figure()
+#fig.savefig('out/chart.png')
 

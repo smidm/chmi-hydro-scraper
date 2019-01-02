@@ -4,7 +4,7 @@ Suitable for http://hydro.chmi.cz/hpps/* (as of beginning 2019).
 
 Example output:
 
-![temperature chart](doc/chart.png)
+![temperature chart](doc/screenshot.png)
 
 ```
 2018-12-17 13:00:00,46,52.1,4.7
@@ -19,12 +19,12 @@ Example output:
 # Installation
 
     conda env create -f conda.yml
-    
+
 # Usage
 
     conda activate chmi
     python scraper.py
-    
+
 # Cronjob
 
 Edit paths in the `crontab`. Set an user crontab to regularly scrape the data:
