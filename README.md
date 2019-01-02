@@ -1,4 +1,4 @@
-# Scraper for Water Levels and Temperatures at chmi.cz
+# Scraper for Water Level and Temperature at chmi.cz
 
 Suitable for http://hydro.chmi.cz/hpps/* (as of beginning 2019).
 
